@@ -1,0 +1,40 @@
+*/*Set's border, padding and margin to 0 for all values*/
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body, html {
+    color: #373C40;
+    font-family: Verdana,Arial, Helvetica, sans-serif;
+    height: 100%;
+    background-color: #f0f0f0;
+    margin:10px;
+}
+body {
+    font-size: 70%;
+}
+h1 {
+    font-weight:200;
+    color: #888888;
+    font-size:16pt;
+    
+    padding-left:33px;
+    margin:7px 5px 8px 8px;
+}
+.flag_deutsch{
+	width:51px;
+	height:35px;
+	float:right;
+	background:transparent url(../img/de.png) no-repeat top left;
+	margin:3px;
+}
+.flag_english{
+	width:51px;
+	height:35px;
+	float:right;
+	background:transparent url(../img/us.png) no-repeat top left;
+	margin:3px;
+}
+
+

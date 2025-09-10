@@ -1,0 +1,1661 @@
+/* Global Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Google Font for Professional Look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* -------------------------------Header---------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #003366;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.contact-button{
+    padding: 12px 18px;
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+}
+.contact-button:Hover{
+    background: transparent;
+    border: 1px solid #003366;
+    color: #003366;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #003366;
+    padding: 10px 15px;
+    display: block;
+}
+.nav-links a:hover{
+    color: #ff6600;
+}
+
+.hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100vh; 
+    background-image: url(../assets/lab1.jpg); 
+    background-size: cover;
+    background-position: right center; 
+    padding: 0 10%;
+    color: white; 
+}
+
+/* Responsive Background Image */
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../assets/lab1.jpg) no-repeat center center;
+    background-size: cover;
+    filter: brightness(60%); /* Ensures text readability */
+    z-index: 0;
+}
+
+/* Content Styling */
+.home {
+    max-width: 600px;
+    text-align: left;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.home h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+
+}
+
+.home h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 400;
+    color: #fff;
+    z-index: -10;
+}
+
+.home button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #ff5722;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 30px;
+    color:#ffffff
+}
+
+.home button:hover {
+    background: transparent;
+    border: 1px solid #002f45;
+    color:  #002f45;
+}
+
+/* 🔄 Responsive Adjustments */
+@media (max-width: 1024px) { /* Tablets */
+    #home {
+        padding: 0 8%;
+    }
+
+    .home h1 {
+        font-size: 2.8rem;
+        text-align: left;
+    }
+
+    .home h3 {
+        font-size: 1.2rem;
+    }
+
+    .home button {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    #home {
+        height: 100vh;
+        padding: 20px;
+        background-size: cover;
+    }
+
+    .home {
+        max-width: 90%;
+    }
+
+    .home h1 {
+        font-size: 2.4rem;
+        text-align: left;
+    }
+
+    .home h3 {
+        font-size: 1.1rem;
+    }
+
+    .home button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) { /* Small Mobile */
+    .home h1 {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .home h3 {
+        font-size: 1rem;
+    }
+
+    .home button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* -----------------------------------Offers Section------------------------------ */
+.offers {
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #f0f0f0;
+}
+
+.offers h1{
+    color: #003366;
+    padding:50px 30px 50px 30px;
+}
+
+.offer-msg {
+    font-size: x-large;
+    color: #032d58;
+    padding-bottom: 50px;
+}
+
+/* -----------------------------------Explore Tests Section------------------------------*/
+.lab-tests {
+    padding: 40px 10%;
+    background-color: #dcedd4;
+}
+
+.lab-tests h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #032d58;
+}
+
+.test-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.test {
+    background-color: #dcedd4;
+    padding: 20px;
+    border-radius: 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;         */
+    font-family:  Arial, Helvetica, sans-serif;
+    font-weight: 400;
+} 
+
+.test p::before {
+    content: "✔";
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 2px solid rgb(217, 51, 51);
+    color: rgb(217, 51, 51);
+    font-size: 10px;
+    font-weight: bold;
+}
+.test p{
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/*--------------------------------------- Labs Section------------------------------*/
+.lab {
+    text-align: center;
+    padding: 40px 10%;
+}
+
+.lab h1{
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+.lab-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+
+/* Card Container */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 350px; /* Fixed width for uniformity */
+    min-height: 400px; /* Ensures equal height */
+    background: #ffffff;
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    padding-bottom: 40px;
+}
+
+/* Image Styling */
+.card img {
+    width: 100px; 
+    max-width: 180px;
+    height: 50px; 
+    max-height: 100px;
+    /* object-fit: cover;  */
+    border-radius: 8px;
+}
+
+/* Title */
+.card h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #003366;
+}
+
+/* Description */
+.card p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #043362;
+    flex-grow: 1; /* Ensures equal spacing in all cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Button Styling */
+.card button {
+    background: #fe5c2a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+    align-self: center;
+}
+
+.card button:hover {
+    background: transparent;
+    border: 1px solid #fe5c2a;
+    color:#fe5c2a
+}
+
+/* Flex Container for Multiple Cards */
+.lab-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Responsive Adjustments */
+ /* 🔹 For Laptops & Tablets */
+ @media (max-width: 1024px) {
+    .lab h1 {
+        font-size: 2.5rem;
+    }
+
+    .lab-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .card {
+        max-width: 320px; /* Adjusted for better layout */
+        min-height: 420px; /* Increased height for proper content spacing */
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .card button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+/* 🔹 For Mobile Devices */
+@media (max-width: 768px) {
+    .lab {
+        padding: 40px 5%;
+    }
+
+    .lab h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .lab-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 800px; /* Larger card size for better mobile readability */
+        min-height: 450px; /* More height for better spacing */
+        padding: 40px;
+    }
+
+    .card img {
+        max-width: 150px;
+        max-height: 120px;
+    }
+
+    .card h3 {
+        font-size: 1.6rem;
+        margin-top: 15px;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .card button {
+        padding: 8px 16px; /* Slightly smaller padding */
+        font-size: 0.9rem;
+        width:40%;
+        height:60% /* Adjust font size */
+    }
+}
+
+/* 🔹 For Small Mobile Screens */
+@media (max-width: 480px) {
+    .lab {
+        padding: 30px 5%;
+    }
+
+    .lab h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        width: 95%;
+        max-width: 380px;
+        min-height: 470px;
+    }
+
+    .card img {
+        max-width: 140px;
+        max-height: 110px;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+
+    .card button {
+        padding: 6px 14px; /* More compact padding */
+        font-size: 0.85rem; /* Reduce font size */
+        border-radius: 25px;
+        width:60%;
+        height:60%/* Slightly smaller border-radius */
+    }
+}
+
+@media (max-width: 360px) {
+    .card button {
+        padding: 5px 12px; /* Minimal padding for small screens */
+        font-size: 0.8rem; /* Smaller font */
+        border-radius: 20px; /* Adjusted roundness */
+    }
+}
+/* --------------------------------------Packages---------------------------------- */
+
+
+/* Google Font for Professional Look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
+.packages {
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+.price{
+    color: #fff;
+    border-radius: 80px;
+    padding: 10px 0px 10px 0px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-bottom: 40px;
+    padding-top: 30px;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #003366;
+}
+h3{
+    padding-bottom: 10px;
+}
+
+.package-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+   
+}
+
+.pack {
+    background-color: #6e0a0a;
+    color: #fff;
+    padding: 20px;
+    border-radius: 80px;
+    width: 300px;
+    text-align: center;
+    box-shadow: rgba(255, 0, 0, 0.052) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px; /* Adjust this based on your tallest box */
+    padding-bottom: 40px;
+}
+
+.pack:hover {
+    transform: translateY(-10px);
+}
+
+.pack h1 {
+    color: #D32F2F;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.pack h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.pack h3{
+    color: #D32F2F;
+}
+
+.pack-para {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: top; /* Centers text if there's less content */
+}
+
+.pack-para p {
+    font-size: 0.95rem;
+    line-height: 2;
+    font-weight: 400;
+    font-weight: bold;
+}
+button#booking {
+    background-color: #fff5f5;
+    color: #D32F2F;
+    padding: 12px 25px; /* Reduce padding */
+    border: none;
+    border-radius: 50px; /* Adjust border-radius */
+    font-size: 1rem; /* Reduce font size */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px; 
+    display: block; /* Ensures centering */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+button#booking:hover {
+    background-color: transparent;
+    color: #fffcfc;
+    border:1.5px solid #ffffff;
+}
+
+
+/* Responsive Design for Packages Section */
+@media (max-width: 1200px) {
+    .package-cards {
+        gap: 40px;
+        padding: 15px;
+    }
+
+    .pack {
+        width: 280px;
+        padding: 25px;
+    }
+
+    .pack h1 {
+        font-size: 1.8rem;
+    }
+
+    .pack h2 {
+        font-size: 1.3rem;
+    }
+
+    .pack-para p {
+        font-size: 1rem;
+    }
+
+    button#booking {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .package-cards {
+        gap: 30px;
+    }
+
+    .pack {
+        width: 260px;
+        padding: 22px;
+    }
+
+    .pack h1 {
+        font-size: 1.7rem;
+    }
+
+    .pack h2 {
+        font-size: 1.2rem;
+    }
+
+    .pack-para p {
+        font-size: 0.95rem;
+    }
+
+    button#booking {
+        font-size: 0.95rem;
+        padding: 10px 22px;
+    }
+}
+
+@media (max-width: 900px) {
+    .packages {
+        padding: 40px 0;
+    }
+
+    .package-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .pack {
+        width: 240px;
+        padding: 20px;
+        border-radius: 60px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .pack h1 {
+        font-size: 1.6rem;
+    }
+
+    .pack h2 {
+        font-size: 1.1rem;
+    }
+
+    .pack-para p {
+        font-size: 0.9rem;
+    }
+
+    button#booking {
+        font-size: 0.9rem;
+        padding: 9px 20px;
+    }
+    .price {
+        padding: 20px 0px; /* Adjust padding */
+        border-radius: 50px; /* Reduce border-radius */
+        margin-bottom: 30px;
+    }
+
+    .price h1 {
+        font-size: 2.2rem; /* Slightly smaller font */
+        padding-top: 10px;
+    }
+
+    .price h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .package-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .pack {
+        width: 90%;
+        max-width: 320px;
+        padding: 18px;
+        border-radius: 50px;
+        padding-top: 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .pack h1 {
+        font-size: 1.5rem;
+    }
+
+    .pack h2 {
+        font-size: 1rem;
+    }
+
+    .pack-para p {
+        font-size: 0.85rem;
+    }
+
+    button#booking {
+        font-size: 0.85rem;
+        padding: 8px 18px;
+    }
+    .price {
+        padding: 15px 0px;
+        border-radius: 40px;
+    }
+
+    .price h1 {
+        font-size: 2rem;
+        padding-top: 8px;
+    }
+
+    .price h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .pack {
+        width: 95%;
+        max-width: 300px;
+        padding: 30px;
+        border-radius: 40px;
+        padding-top: 30px;
+    }
+
+    .pack h1 {
+        font-size: 1.4rem;
+        padding-top: 8px;
+    }
+
+    .pack h2 {
+        font-size: 1rem;
+    }
+
+    .pack-para p {
+        font-size: 0.8rem;
+    }
+
+    button#booking {
+        font-size: 0.8rem;
+        padding: 7px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .packages {
+        padding: 30px 0;
+    }
+
+    .package-cards {
+        gap: 15px;
+    }
+
+    .pack {
+        width: 95%;
+        max-width: 280px;
+        padding: 30px;
+        border-radius: 50px;
+        padding-top: 10px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .pack h1 {
+        font-size: 1.3rem;
+    }
+
+    .pack h2 {
+        font-size: 0.95rem;
+    }
+
+    .pack-para p {
+        font-size: 0.75rem;
+    }
+
+    button#booking {
+        font-size: 0.75rem;
+        padding: 6px 14px;
+    }
+    .price {
+        padding: 10px 0px;
+        border-radius: 40px;
+        margin-bottom: 20px;
+        padding-top: 30px;
+    }
+
+    .price h1 {
+        font-size: 1.8rem;
+        padding-top: 8px;
+    }
+
+    .price h3 {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .pack {
+        max-width: 260px;
+        padding: 25px;
+        border-radius: 50px;
+        padding-top: 8px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .pack h1 {
+        font-size: 1.2rem;
+    }
+
+    .pack h2 {
+        font-size: 0.9rem;
+    }
+
+    .pack-para p {
+        font-size: 0.7rem;
+    }
+
+    button#booking {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+    }
+    .price {
+        padding: 8px 0px;
+        border-radius: 40px;
+        margin-bottom: 15px;
+    }
+
+    .price h1 {
+        font-size: 1.6rem;
+        padding-top: 10px;
+    }
+
+    .price h3 {
+        font-size: 0.9rem;
+    }
+}
+/*------------------------------------- Testimonials -----------------------------*/
+.testimonial-container {
+    padding: 50px 0;
+    background: #f9f9f9;
+}
+.testimonial-container h3{
+    color:rgb(227, 0, 0);
+    
+}
+.testimonial-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.testimonial-content {
+    flex: 1;
+}
+
+.testimonial-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.testimonial {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    color: #ff6200;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ff6200;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+}
+
+@media (max-width: 900px) {
+    .testimonial-wrapper {
+        flex-direction: column; /* Stack items vertically */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .testimonial-image {
+        order: -1; /* Moves image to the top */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .testimonial-content {
+        width: 100%;
+    }
+
+    .testimonial-image img {
+        max-width: 80%; /* Adjust image size */
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        padding: 25px;
+    }
+
+    .testimonial p {
+        font-size: 1rem;
+    }
+
+    .testimonial-image img {
+        max-width: 70%; /* Further reduce image size */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-container {
+        padding: 30px 0;
+    }
+
+    .testimonial-wrapper {
+        flex-direction: column;
+    }
+
+    .testimonial-image {
+        order: -1; /* Ensures image stays at the top */
+    }
+
+    .testimonial {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .testimonial p {
+        font-size: 0.9rem;
+    }
+
+    .testimonial h4 {
+        font-size: 1rem;
+    }
+
+    .testimonial-image img {
+        max-width: 90%;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .testimonial {
+        padding: 15px;
+    }
+
+    .testimonial p {
+        font-size: 0.85rem;
+    }
+
+    .testimonial h4 {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-image img {
+        max-width: 95%;
+        border-radius: 6px;
+    }
+}
+
+
+
+/*------------------------------------- Expert Team Section -----------------------------*/
+.expert-team {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #f8f8f8;
+    background-image: assets/bg/webp;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Heading Styling */
+.expert-team h1 {
+    margin-bottom: 20px;
+    padding: 10px 0 20px 0;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Button Styling */
+.expert-team button {
+    padding: 15px 35px;
+    border-radius: 30px;
+    background-color: #ff3700;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+
+.expert-team button:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) { /* Tablets */
+    .expert-team {
+        padding: 50px 15px;
+        background-size: contain;
+    }
+    .expert-team h1 {
+        font-size: 30px;
+    }
+    .expert-team button {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .expert-team {
+        padding: 40px 10px;
+        background-size: cover;
+    }
+    .expert-team h1 {
+        font-size: 28px;
+    }
+    .expert-team button {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+}
+
+/*---------------------------------------- Footer ---------------------------------*/
+
+.footer {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+.footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 170px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-column h4::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #ffcc00;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.footer-list,
+.footer-lists {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li,
+.footer-lists li {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.footer-list li a,
+.footer-lists li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-list li a:hover,
+.footer-lists li a:hover {
+    color: #ffcc00;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    background: #0d0d0d;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+}
+
+/*------------------------------------ Floating Buttons -----------------------*/
+.floating-button {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    background: #ffcc00;
+    color: #1a1a1a;
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.floating-button i {
+    margin-right: 8px;
+}
+
+.floating-button:hover {
+    background: #e6b800;
+}
+
+.call-button {
+    bottom: 130px;
+}
+
+.whatsapp-button {
+    background: #25D366;
+    color: #fff;
+}
+
+.whatsapp-button:hover {
+    background: #1ebe57;
+}
+
+/* --------------------------------------Scroll to Top Button----------------------- */
+.scroll-top-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #ffcc00;
+    color: #1a1a1a;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+}
+
+.scroll-top-button:hover {
+    background: #e6b800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-sections {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .floating-button,
+    .scroll-top-button {
+        right: 10px;
+    }
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 900px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .lab-tests, .lab, .packages {
+        padding: 20px 5%;
+    }
+
+    .test-cards, .lab-cards, .package-cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+/* -----------------------------------Floating WhatsApp Button -----------------------------*/
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 45px;
+        height: 45px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+
+/*---------------------------------------- Floating Call Us Button -----------------------------*/
+.call-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.call-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff5733, #d83423); /* Red-Brown Premium Gradient */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 2px solid white; /* White Border */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.call-btn img {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    filter: invert(1); /* Makes the icon white */
+}
+
+.call-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #d83423, #b02518); /* Darker Gradient on Hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .call-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+    .call-btn img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .call-btn {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+    .call-btn img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+
+
+
+/*------------------------------------- login form -----------------------------*/
+
+body.popup-open {
+    overflow: hidden;
+    height: 100vh; /* Prevents scrolling */
+}
+body.popup-open #home {
+    filter: blur(5px); /* Blurs the background content */
+    opacity: 0.3; /* Makes the background slightly transparent */
+    pointer-events: none; /* Prevents clicking on the background */
+}
+
+.popup-content {
+    z-index: 1001;
+}
+#authPopup {
+    display: none; /* Ensures the popup is hidden initially */
+    z-index: 1000;
+}
+
+
+/* Popup Background */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup Content */
+.popup-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 380px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* User Icon */
+.icon {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+/* Headings */
+.form h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Description Text */
+.form p {
+    color: #555;
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
+/* Input Fields */
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    color:#333;
+}
+
+.form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Password Input with Eye Icon */
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    font-size: 14px;
+}
+
+.toggle-password:hover {
+    color: #007bff;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Forgot Password */
+.forgot {
+    display: block;
+    margin: 10px 0;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+/* Switch Between Forms */
+.switch-text {
+    color: #555;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.switch-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+}
+/* Responsive Popup */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 90%;
+        max-width: 320px;
+        padding: 20px;
+    }
+
+    .form h2 {
+        font-size: 20px;
+    }
+
+    .form p {
+        font-size: 13px;
+    }
+
+    .form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-content {
+        width: 95%;
+        max-width: 280px;
+        padding: 15px;
+    }
+
+    .close {
+        top: 10px;
+        right: 15px;
+        font-size: 18px;
+    }
+
+    .form h2 {
+        font-size: 18px;
+    }
+
+    .form p {
+        font-size: 12px;
+    }
+
+    .form input {
+        font-size: 13px;
+        padding: 7px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 7px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

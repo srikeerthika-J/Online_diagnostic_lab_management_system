@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/*----------------------------- Header ----------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #003366;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.contact-button{
+    padding: 12px 18px;
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+}
+
+.contact-button:Hover{
+    background: transparent;
+    border: 1px solid #003366;
+    color: #003366;
+}
+
+
+
+/* Show List Button */
+#show-list {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #1E2A38;
+    border: 2px solid #FFD700;
+}
+
+#show-list:hover {
+    background: linear-gradient(135deg, #FFA500, #FF8C00);
+}
+
+/* Book Now Button */
+#book-now {
+    background: linear-gradient(135deg, #008080, #006666);
+    color: white;
+    border: 2px solid #008080;
+    margin: auto;
+}
+
+#book-now:hover {
+    background: linear-gradient(135deg, #006666, #004D4D);
+}
+
+
+/* Success Toast */
+.toast.success {
+    background: #28a745;
+}
+
+/* Error Toast */
+.toast.error {
+    background: #dc3545;
+}
+
+/* Show Toast */
+.toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/*-------------------------------------- Note -------------------------------------- */
+
+.accordion-container {
+    width: 80%;
+    max-width: 700px;
+    background: linear-gradient(135deg, #00264d, #004d80);
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: white;
+    margin: 30px auto;
+}
+
+.accordion {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion i {
+    transition: transform 0.3s ease;
+}
+
+.accordion-h1{
+    text-align:left;
+    padding:20px;
+}
+
+.active i {
+    transform: rotate(180deg);
+}
+
+.panel {
+    padding: 0 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.panel p {
+    padding: 15px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.panel p:last-child {
+    border-bottom: none;
+}
+
+/* Large Screens (1024px and above) */
+@media (max-width: 1024px) {
+    .accordion-container {
+        width: 85%;
+        max-width: 650px;
+        padding: 18px;
+    }
+
+    .accordion {
+        font-size: 17px;
+        padding: 14px;
+    }
+
+    .panel p {
+        font-size: 15px;
+        padding: 12px 0;
+    }
+}
+
+/* Medium Screens (900px - 1024px) */
+@media (max-width: 900px) {
+    .accordion-container {
+        width: 90%;
+        max-width: 600px;
+        padding: 16px;
+    }
+
+    .accordion {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .panel p {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+}
+
+/* Tablet Screens (768px - 900px) */
+@media (max-width: 768px) {
+    .accordion-container {
+        width: 95%;
+        max-width: 550px;
+        padding: 14px;
+    }
+
+    .accordion {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .panel p {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+}
+
+/* Small Screens (480px - 768px) */
+@media (max-width: 480px) {
+    .accordion-container {
+        width: 95%;
+        max-width: 90%;
+        padding: 12px;
+    }
+
+    .accordion {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .accordion i {
+        font-size: 16px;
+    }
+
+    .panel {
+        padding: 0 12px;
+    }
+
+    .panel p {
+        font-size: 13px;
+        padding: 8px 0;
+    }
+}
+
+/* Extra Small Screens (Below 480px) */
+@media (max-width: 360px) {
+    .accordion-container {
+        width: 98%;
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .accordion {
+        font-size: 13px;
+        padding: 9px;
+    }
+
+    .accordion i {
+        font-size: 14px;
+    }
+
+    .panel p {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+}
+
+/*---------------------------------- Footer --------------------------- */
+
+.footer {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+.footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 170px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-column h4::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #ffcc00;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.footer-list,
+.footer-lists {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li,
+.footer-lists li {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.footer-list li a,
+.footer-lists li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-list li a:hover,
+.footer-lists li a:hover {
+    color: #ffcc00;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    background: #0d0d0d;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+}
+
+/* --------------------------Floating Buttons -----------------------------*/
+.floating-button {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    background: #ffcc00;
+    color: #1a1a1a;
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.floating-button i {
+    margin-right: 8px;
+}
+
+.floating-button:hover {
+    background: #e6b800;
+}
+
+.call-button {
+    bottom: 130px;
+}
+
+.whatsapp-button {
+    background: #25D366;
+    color: #fff;
+}
+
+.whatsapp-button:hover {
+    background: #1ebe57;
+}
+
+/*---------------------------------- Scroll to Top Button----------------------------- */
+.scroll-top-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #ffcc00;
+    color: #1a1a1a;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+}
+
+.scroll-top-button:hover {
+    background: #e6b800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-sections {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .floating-button,
+    .scroll-top-button {
+        right: 10px;
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 900px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .lab-tests, .lab, .packages {
+        padding: 20px 5%;
+    }
+
+    .test-cards, .lab-cards, .package-cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .lab-tests, .lab, .packages {
+        padding: 20px 5%;
+    }
+
+    .test-cards, .lab-cards, .package-cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+.book-bottom {
+    text-align: center;
+    /* background: linear-gradient(135deg, #2C3E50, #4CA1AF);  */
+    background-image: url(https://files.oaiusercontent.com/file-Y2aE59Sxzzqw339cNAztA2?se=2025-02-14T05%3A42%3A20Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D7c12d27e-caa6-4702-9fa1-6005209d6bf6.webp&sig=fuwlq3NoMSNwUDI9/QK9MnYfwI2PgLV0MVsN3FDHQvA%3D);
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    padding: 50px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+}
+
+.book-bottom h4{
+    margin-top: 20px;
+    color: rgb(5, 39, 2);
+}
+.book-bottom h1{
+    color: rgb(5, 39, 2);
+}
+
+
+.book-para{
+    padding-left: 100px;
+    padding-right: 200px;
+    padding-top: 100px;
+}
+
+
+
+/* ---------------------Floating WhatsApp Button -------------------------*/
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 45px;
+        height: 45px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* ----------------------------------Floating Call Us Button -----------------------------*/
+.call-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.call-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff5733, #d83423); /* Red-Brown Premium Gradient */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 2px solid white; /* White Border */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.call-btn img {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    filter: invert(1); /* Makes the icon white */
+}
+
+.call-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #d83423, #b02518); /* Darker Gradient on Hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .call-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+    .call-btn img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .call-btn {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+    .call-btn img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+
