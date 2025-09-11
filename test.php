@@ -23,7 +23,7 @@
     </div>
 
     <div class="custom-card">
-        <h3>Abnormal Haemoglobin StudiesHb Variants&CBC</h3>
+        <h3>Abnormal Haemoglobi StudiesHb Variants&CBC</h3>
         <p class="custom-mrp">MRP : ₹ 900</p>
         <span class="custom-offer">Offer : ₹ 700</span><br>
         <button class="custom-btn" onclick="location.href='book.php'">Book Now</button>
