@@ -1,3 +1,11 @@
+Online Diagnostic Lab Management System
+The Online Diagnostic Lab Management System is a web-based platform designed to simplify and digitize diagnostic lab operations. The system provides secure user registration and login, online test booking, report access, and enquiry handling, ensuring an efficient and seamless experience for patients.
+
+An integrated Admin Dashboard allows administrators to manage labs, packages, tests, users, and bookings effectively. The admin panel supports features like adding/editing lab tests, updating booking status, assigning operators, uploading reports, and monitoring user activity.
+
+Developed using HTML, CSS, JavaScript, PHP, and MySQL, the project emphasizes accessibility, data accuracy, and professional interface design, making it highly useful for both patients and lab operators.
+
+
 <img width="1902" height="911" alt="Screenshot 2025-10-07 171310" src="https://github.com/user-attachments/assets/b583e18f-6d7e-4c8b-9d04-01f0fcb4b1fd" />
 <img width="1898" height="911" alt="Screenshot 2025-10-07 171331" src="https://github.com/user-attachments/assets/36804769-90e3-4740-9cbc-918ee924bc3b" />
 <img width="1902" height="916" alt="Screenshot 2025-10-07 171401" src="https://github.com/user-attachments/assets/db9c1a35-3a9b-43c1-be9f-9a9343f29fe6" />
